@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">HavaDurumuMrC</string>
+    <string name="error_message">Error, Try Again!</string>
+    <string name="location_text">Location</string>
+    <string name="city_name">City Name</string>
+    <string name="weather_status_text">Few Cloudy</string>
+    <string name="centigrade_text">20 °C</string>
+    <string name="city_information_text">Ankara</string>
+    <string name="update_hour_text">12:25</string>
+    <string name="sunrise_text">Sunrise</string>
+    <string name="sunrise_data_text">17:35</string>
+    <string name="sunset_text_area">Sunset</string>
+    <string name="sunset_data_text">17:35</string>
+    <string name="wind_text_area">Wind</string>
+    <string name="wind_data_text">17:35</string>
+    <string name="pressure_text_area">Pressure</string>
+    <string name="pressure_data_text">17:35</string>
+    <string name="humudity_text_area">Humudity</string>
+    <string name="humudity_data_text">17:35</string>
+    <string name="location_use_text">Location Use</string>
+    <string name="location_active_status_text">(Not Active)</string>
+    <string name="update_text">UPDATE</string>
+    <string name="error_text">ERROR!!!</string>
+    <string name="error_case_result_search_area_text">Enter Valid City Name</string>
+
+    <string name="selsiyus_symbol"> °C </string>
+    <string name="hPa_presssure_text"> hPa </string>
+    <string name="percent_symbol"> % </string>
+    <string name="wind_speed_unit"> km/h </string>
+    <string name="location_not_active_text">Not Active</string>
+    <string name="location_active_text">Active</string>
+
+
+
+
+
+
+
+
+</resources>
