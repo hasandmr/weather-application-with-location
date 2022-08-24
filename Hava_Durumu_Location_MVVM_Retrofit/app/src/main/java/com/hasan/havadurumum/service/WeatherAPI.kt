@@ -8,13 +8,14 @@ import retrofit2.http.Query
 
 interface WeatherAPI {
 
-    //http://api.openweathermap.org/data/2.5/weather?q=ankara&appid=139c27b32236861c5cf5de2e3cdde6d5
+    //http://api.openweathermap.org/data/2.5/weather?q="city_name"&appid="your_api_key"
+    // for example;
+    //http://api.openweathermap.org/data/2.5/weather?q=paris&appid=12345678910ABCDEFGH
+    //http://api.openweathermap.org/data/2.5/weather?lat="your_latitude"&lon="your_longitude"&appid="your_api_key"      //optional
 
-    //http://api.openweathermap.org/data/2.5/weather?lat=38&lon=27&appid=139c27b32236861c5cf5de2e3cdde6d5      //optional
+    
 
-    // val url="data/2.5/weather?lat="+guncel_latitude+"&lon="+guncel_longtude+"&APPID=139c27b32236861c5cf5de2e3cdde6d5"  //optional
-
-    @GET("data/2.5/weather?&units=metric&APPID=139c27b32236861c5cf5de2e3cdde6d5")
+    @GET("data/2.5/weather?&units=metric&APPID="your_api_key"")
     fun getData(
         @Query("q") cityName: String): Single<WeatherModel>
 
