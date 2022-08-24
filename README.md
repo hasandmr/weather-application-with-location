@@ -1,7 +1,7 @@
 # weather-application-with-location
-This application is a daily weather application. You can search for the place you want or according to the location of the city you are in.
+This application is a daily weather application. You can search for the place you want or according to the location of the city you are in.You can create an account from the "open weather" website, get an app id and use it.
 -------------------------------------------------------------------------------
-Bu uygulama günlük hava durumu uygulamasıdır. İstediğiniz yeri veya bulunduğunuz şehrin konumuna göre arama yapabilirsiniz.
+Bu uygulama günlük hava durumu uygulamasıdır. İstediğiniz yeri veya bulunduğunuz şehrin konumuna göre arama yapabilirsiniz."open weather" sitesinden bir hesap oluşturup, app id alıp kullanabilirsiniz 
 ------------------------------------------------------------------------------
 aşağıda uygulama içi çıktılar mevcuttur.
 
