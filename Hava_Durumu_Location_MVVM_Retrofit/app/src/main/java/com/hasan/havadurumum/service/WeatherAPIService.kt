@@ -7,7 +7,7 @@ import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
 
 class WeatherAPIService {
-    //http://api.openweathermap.org/data/2.5/weather?q=ankara&appid=139c27b32236861c5cf5de2e3cdde6d5
+   //http://api.openweathermap.org/data/2.5/weather?q="city_name"&appid="your_api_key"
 
     private val BASE_URL = "http://api.openweathermap.org/"
     private val api = Retrofit.Builder()
