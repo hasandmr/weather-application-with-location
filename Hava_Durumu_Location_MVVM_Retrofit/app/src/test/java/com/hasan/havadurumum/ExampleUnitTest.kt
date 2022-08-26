@@ -1,4 +1,4 @@
-package com.mrcaracal.havadurumum
+package com.hasan.havadurumum
 
 import org.junit.Test
 

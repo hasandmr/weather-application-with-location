@@ -13,8 +13,12 @@ import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.ViewModelProviders
 import com.bumptech.glide.Glide
+import com.hasan.havadurumumrc.BuildConfig
 import com.hasan.havadurumumrc.R
+import com.hasan.havadurumumrc.model.WeatherModel
+import com.hasan.havadurumumrc.service.WeatherAPI
 import com.hasan.havadurumumrc.viewmodel.MainViewModel
+import io.reactivex.Single
 import kotlinx.android.synthetic.main.activity_main.*
 import java.text.SimpleDateFormat
 import java.util.*
@@ -40,6 +44,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
         GET = getSharedPreferences(packageName, MODE_PRIVATE)
         SET = GET.edit()
         viewmodel = ViewModelProviders.of(this).get(MainViewModel::class.java)
@@ -53,8 +58,6 @@ class MainActivity : AppCompatActivity() {
         SET.commit()
         viewmodel.refreshData(cName)
         getLiveData()
-
-
         swipe_refresh_layout.setOnRefreshListener {
             dataLinearLayout.visibility = View.GONE
             resultError.visibility = View.GONE
@@ -66,8 +69,6 @@ class MainActivity : AppCompatActivity() {
             viewmodel.refreshData(cityName!!)
             swipe_refresh_layout.isRefreshing = false
         }
-
-
         imageSearch.setOnClickListener {
             //search will be by city in entered in the blank
             location_active_status.text = getString(R.string.location_not_active_text)
@@ -78,8 +79,6 @@ class MainActivity : AppCompatActivity() {
             getLiveData()
             Log.i(TAG, "onCreate: " + cityName)
         }
-
-
         location_use_image.setOnClickListener {
             //search will be by LOCATİON
             location_active_status.setText(getString(R.string.location_active_text))
@@ -101,7 +100,6 @@ class MainActivity : AppCompatActivity() {
 
         }
     }
-
     fun intro(): String? {
         //search will be by LOCATİON
         location_active_status.setText(getString(R.string.location_active_text))
@@ -172,8 +170,10 @@ class MainActivity : AppCompatActivity() {
             e.printStackTrace()
         }
         return cityName
-
     }
+
+
+
 
     //When we get permission, it sends us the result of the permission.
     override fun onRequestPermissionsResult(
@@ -272,7 +272,6 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
-
         viewmodel.weather_loading.observe(this) { loading ->
             loading?.let {
                 if (loading) {
@@ -287,5 +286,5 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
-
 }
+
