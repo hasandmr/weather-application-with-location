@@ -10,12 +10,19 @@ import retrofit2.http.Query
 
 interface WeatherAPI {
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> e0465ece44dfab1d992edf349fd5a7fda78a0808
     @GET("data/2.5/weather?&units=metric&APPID=${id_Information.open_weather_id_text}")
     fun getData(@Query("q") cityName: String):Single<WeatherModel>
 }
 
+<<<<<<< HEAD
 
 
 
 
 //data/2.5/weather?&units=metric&APPID=${id_Information.open_weather_id_text}
+=======
+>>>>>>> e0465ece44dfab1d992edf349fd5a7fda78a0808
