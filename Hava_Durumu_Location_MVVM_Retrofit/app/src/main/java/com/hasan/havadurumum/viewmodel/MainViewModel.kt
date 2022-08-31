@@ -14,8 +14,8 @@ private const val TAG = "MainViewModel"
 
 class MainViewModel : ViewModel() {
 
-    private val weatherApiService = WeatherAPIService()
-    private val disposable = CompositeDisposable()
+     val weatherApiService = WeatherAPIService()
+     val disposable = CompositeDisposable()
 
     val weather_data = MutableLiveData<WeatherModel>()
     val weather_error = MutableLiveData<Boolean>()
@@ -25,7 +25,7 @@ class MainViewModel : ViewModel() {
         getDataFromAPI(cityName)
     }
 
-    private fun getDataFromAPI(cityName: String) {
+    fun getDataFromAPI(cityName: String) {
 
         weather_loading.value = true
         disposable.add(

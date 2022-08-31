@@ -30,14 +30,14 @@ private const val TAG = "MainActivity"
 class MainActivity : AppCompatActivity() {
 
     private lateinit var viewmodel: MainViewModel
-    private lateinit var locationManager: LocationManager
-    private lateinit var locationListener: LocationListener
+    lateinit var locationManager: LocationManager
+    lateinit var locationListener: LocationListener
 
     private lateinit var GET: SharedPreferences
     private lateinit var SET: SharedPreferences.Editor
 
-    private var actual_latitude: Double = 0.0
-    private var actual_longtude: Double = 0.0
+    var actual_latitude: Double = 0.0
+    var actual_longtude: Double = 0.0
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -123,7 +123,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     // take location from user
-    private fun get_location() {
+    fun get_location() {
         locationManager = getSystemService(Context.LOCATION_SERVICE) as LocationManager
 
         locationListener =
@@ -155,7 +155,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     //translate city name from coming location
-    private fun getCityName(incomin_latitude: Double, incoming_longitude: Double): String? {
+    fun getCityName(incomin_latitude: Double, incoming_longitude: Double): String? {
         var cityName: String? = "Not Found"
         val geocoder = Geocoder(this@MainActivity, Locale.getDefault())
         try {
